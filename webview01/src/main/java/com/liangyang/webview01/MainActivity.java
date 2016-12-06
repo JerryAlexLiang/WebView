@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
+                //重写此方法返回true表明点击网页里面的链接还是在当前的webview里跳转，不跳到浏览器那边
                 return true;
             }
         });
