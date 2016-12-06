@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">webview01</string>
+    <string name="url_address_name">请输入你要打开的网址</string>
+    <string name="click_button">搜素</string>
+</resources>
