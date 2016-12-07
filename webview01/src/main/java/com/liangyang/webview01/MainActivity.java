@@ -8,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewParent;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -39,6 +40,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSerachBtn.setOnClickListener(this);
         //启用支持javascript
         mWebView.getSettings().setJavaScriptEnabled(true);
+        //设置可以支持缩放
+        mWebView.getSettings().setSupportZoom(true);
+        //设置出现缩放工具
+        mWebView.getSettings().setBuiltInZoomControls(true);
+        //扩大比例的缩放
+        mWebView.getSettings().setUseWideViewPort(true);
+        //自适应屏幕
+        mWebView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+        mWebView.getSettings().setLoadWithOverviewMode(true);
+
 
         /**
          * WebViewClient
